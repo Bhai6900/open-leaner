@@ -16,14 +16,22 @@
   </head>
   <body>
     <div class="container" >
-      <h1 class="text-center mt-2 mb-4">OPEN LEARNER </h1>  
+      <h1 class="text-center mt-2 mb-4">{{ company_name }} </h1>  
     <img  id="banner" class="img-fluid" src="static/work.jpg " >
     <h2 class="text-center mt-2 mb-4"> ABOUT OPEN LEARNER</h2>
     <P class="lead" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero justo laoreet sit amet cursus sit amet dictum sit. Quis blandit turpis cursus in hac. Nibh ipsum consequat nisl vel pretium lectus. Amet consectetur adipiscing elit pellentesque habitant morbi. Sit amet dictum sit amet justo donec enim. Pretium nibh ipsum consequat nisl vel pretium lectus. Id eu nisl nunc mi ipsum faucibus vitae. At augue eget arcu dictum varius duis at. Ultrices gravida dictum fusce ut placerat orci nulla pellentesque. Faucibus ornare suspendisse sed nisi lacus sed viverra. Penatibus et magnis dis parturient montes nascetur ridiculus. Egestas sed sed risus pretium quam. Proin gravida hendrerit lectus a. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices. At varius vel pharetra vel turpis. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus et. Quam pellentesque nec nam aliquam sem et tortor. Dis parturient montes nascetur ridiculus mus mauris.</P>
     <h2 class="text-center mt-2 mb-4" >
       open position
     </h2>
-    <p >to- show about job here</p>
+    <p >
+      {% for job in jobs %}
+      {% include 'jobitem.html' %}
+ 
+     
+      {% endfor %}
+      
+  
+    </p>
       <div style="text-align:center">
     <button class="btn btn-primary">contact us </button>
         <p class="mt-4 mb-2">copyright(c)open learner</p>
